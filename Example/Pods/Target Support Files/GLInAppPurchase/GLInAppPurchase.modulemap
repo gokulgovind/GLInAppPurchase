@@ -1,0 +1,6 @@
+framework module GLInAppPurchase {
+  umbrella header "GLInAppPurchase-umbrella.h"
+
+  export *
+  module * { export * }
+}

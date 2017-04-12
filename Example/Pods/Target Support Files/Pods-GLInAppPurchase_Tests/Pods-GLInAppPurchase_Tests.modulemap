@@ -1,0 +1,6 @@
+framework module Pods_GLInAppPurchase_Tests {
+  umbrella header "Pods-GLInAppPurchase_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

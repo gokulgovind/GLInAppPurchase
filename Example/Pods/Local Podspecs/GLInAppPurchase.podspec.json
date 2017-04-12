@@ -1,0 +1,22 @@
+{
+  "name": "GLInAppPurchase",
+  "version": "0.1.0",
+  "summary": "A short description of GLInAppPurchase.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/gokulgovind/GLInAppPurchase",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "gokulgovind": "gokulece26@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/gokulgovind/GLInAppPurchase.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "GLInAppPurchase/Classes/**/*"
+}

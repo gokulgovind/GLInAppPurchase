@@ -1,0 +1,16 @@
+PODS:
+  - GLInAppPurchase (0.1.0)
+
+DEPENDENCIES:
+  - GLInAppPurchase (from `../`)
+
+EXTERNAL SOURCES:
+  GLInAppPurchase:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GLInAppPurchase: 688d2cb6585a33edae2e0626a6158c2ea5d25c08
+
+PODFILE CHECKSUM: f3f41a0cb7d475687a0ed1be251038745fba0d45
+
+COCOAPODS: 1.2.0
