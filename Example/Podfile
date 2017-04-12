@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GLInAppPurchase_Example' do
+  pod 'GLInAppPurchase', :path => '../'
+
+  target 'GLInAppPurchase_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
