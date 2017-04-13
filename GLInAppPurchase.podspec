@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'GLInAppPurchase'
-s.version          = '0.1.0'
+s.version          = '0.1.1'
 s.summary          = 'GLInAppPurchase allows user to use "Tinder InAppPurchase UI" in their App with minimal code.'
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,9 @@ s.ios.deployment_target = '8.0'
 
 s.source_files = 'GLInAppPurchase/Classes/**/*'
 
-s.resource_bundles = {
-'GLInAppPurchase' => ['GLInAppPurchase/Classes/*.xib']
-}
+# s.resource_bundles = {
+# 'GLInAppPurchase' => ['GLInAppPurchase/GLInAppPurchase/Classes/*.xib']
+# }
 
 # s.public_header_files = 'Pod/Classes/**/*.h'
 s.frameworks = 'UIKit'

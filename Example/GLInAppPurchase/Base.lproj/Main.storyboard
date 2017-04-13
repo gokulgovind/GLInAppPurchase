@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iYI-eG-V0w">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GLInAppPurchase-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GLInAppPurchase_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="3al-wN-Pah">
+                                <rect key="frame" x="0.0" y="-65" width="320" height="569"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1u-3R-zzU">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <connections>
+                                    <action selector="Check:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Pgz-Jo-fW3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="u1u-3R-zzU" secondAttribute="trailing" id="bAW-pQ-wuh"/>
+                            <constraint firstItem="3al-wN-Pah" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="-65" id="d5b-dR-Kma"/>
+                            <constraint firstItem="3al-wN-Pah" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="es9-5J-Olo"/>
+                            <constraint firstItem="u1u-3R-zzU" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="gOa-VC-VxY"/>
+                            <constraint firstAttribute="trailing" secondItem="3al-wN-Pah" secondAttribute="trailing" id="haO-EW-6EC"/>
+                            <constraint firstItem="u1u-3R-zzU" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="ohq-U8-CIv"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="u1u-3R-zzU" secondAttribute="bottom" id="tPI-hA-DHL"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3al-wN-Pah" secondAttribute="bottom" id="xYb-rz-8Il"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="GLInAppPurchase" id="fCE-bR-A5X"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1115" y="351"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PQx-20-0n6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iYI-eG-V0w" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DhK-fj-4c8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="yxa-RO-cj3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWC-wn-nvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="730" y="351"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BG" width="750" height="1334"/>
+    </resources>
 </document>

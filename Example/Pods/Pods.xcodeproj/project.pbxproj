@@ -7,69 +7,83 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10285AE8DCDF884B6B3CED8A93D26471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		05FD0B4A776C1C16C0AEF553CFBCF969 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		34F80A325B7547E5B092C5D8D106080B /* GLInAppPurchaseUI.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4410D8BCF5ADA572F798ADFBE5AADFD5 /* GLInAppPurchaseUI.xib */; };
 		3926F6B49F6CA13C04847B54B9E41F9F /* Pods-GLInAppPurchase_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01363A3A6B148E01A00CC53379FD25BD /* Pods-GLInAppPurchase_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		45B388812C212BBF14E38CDB3EF55756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		68C1F17081DB6A05D8E4614B70454DE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		45B388812C212BBF14E38CDB3EF55756 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
+		66286A73E5405ECAEB78E1C6D1F23F6F /* GLInAppPurchaseUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39074A9FD2248072793F4A663642FBD0 /* GLInAppPurchaseUI.swift */; };
+		68C1F17081DB6A05D8E4614B70454DE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */; };
 		6E3F499FDB0AFC6949963C6979197B95 /* Pods-GLInAppPurchase_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6335CE24F41E90CCC040AF28E148DC /* Pods-GLInAppPurchase_Example-dummy.m */; };
 		841E71BAF3B9E7D7209637BDEA5C783D /* Pods-GLInAppPurchase_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FEB1314844003A5CA53BF7BBA8CEC9B8 /* Pods-GLInAppPurchase_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9EB37D6673D20566497AC0A38B5BF0D9 /* GLInAppPurchase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 163DC40C575FB531EC318E78F445802F /* GLInAppPurchase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A036CF86F2DAD599035977F252321A32 /* GLInAppPurchaseUI.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4410D8BCF5ADA572F798ADFBE5AADFD5 /* GLInAppPurchaseUI.xib */; };
 		AA09ADC3BEAFED135FB25183FCC74373 /* Pods-GLInAppPurchase_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56C89E4D327C9D5CCEA3AD6DD2271B05 /* Pods-GLInAppPurchase_Tests-dummy.m */; };
-		B6B93812E505E3E871C614AA5539CD5A /* GLInAppPurchase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 209BA1E90B4A301016F7A84D5BC70C3B /* GLInAppPurchase-dummy.m */; };
-		F999277687D86F9DC0AC1FE511636124 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95C378D667FBAC58BB0237647CE935 /* ReplaceMe.swift */; };
+		C5DB090776AC40B14FAC8D7747D6EB9A /* GLInAppPurchase.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3733FD72AF13823A15A5694E710F3723 /* GLInAppPurchase.bundle */; };
+		D23A20D37A2E0CC631665C05BDAD25CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */; };
+		DDED05144EF4DFE8FEE850371AC86A59 /* GLInAppPurchase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2273C5EED669D40B10AB114174AC5351 /* GLInAppPurchase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E706818E98A69F06169A6C04E69169F6 /* GLInAppPurchase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92F9D818D766C73FEB44AA86FF323104 /* GLInAppPurchase-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6BAB1011986FBD593B2B89257DA23FC2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AECB23E1FA94B398E5657661BA784CE;
+			remoteInfo = "GLInAppPurchase-GLInAppPurchase";
+		};
 		8CDBBE68DFC90F6EA64FB7E14B682BEB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AC5B8F144CDAFFCD8B70AA17444DBD4E;
+			remoteGlobalIDString = A27D8CE5398875097B0412D375B0942E;
 			remoteInfo = GLInAppPurchase;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		01363A3A6B148E01A00CC53379FD25BD /* Pods-GLInAppPurchase_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GLInAppPurchase_Tests-umbrella.h"; sourceTree = "<group>"; };
-		0FB834CB60E8F0621671F0FC378DB725 /* Pods_GLInAppPurchase_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GLInAppPurchase_Example.framework; path = "Pods-GLInAppPurchase_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		159BD02188C30C07DBC857BF1771C5ED /* GLInAppPurchase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLInAppPurchase.xcconfig; sourceTree = "<group>"; };
-		163DC40C575FB531EC318E78F445802F /* GLInAppPurchase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLInAppPurchase-umbrella.h"; sourceTree = "<group>"; };
-		209BA1E90B4A301016F7A84D5BC70C3B /* GLInAppPurchase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GLInAppPurchase-dummy.m"; sourceTree = "<group>"; };
+		2273C5EED669D40B10AB114174AC5351 /* GLInAppPurchase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLInAppPurchase-umbrella.h"; sourceTree = "<group>"; };
 		2283D19CB7A5B28D84B62F836B0396F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26F77042138BD6BC3C03DA471414518D /* GLInAppPurchase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLInAppPurchase-prefix.pch"; sourceTree = "<group>"; };
 		28C6F6013953900037005108C6A98E83 /* Pods-GLInAppPurchase_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLInAppPurchase_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3436194D467371A942140C96FB1378C9 /* GLInAppPurchase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GLInAppPurchase-prefix.pch"; sourceTree = "<group>"; };
-		38ADB03D04650BC812CB8BA1CD2C9FA4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		399E0B6144864559326A6AC6D1E78DCA /* Pods_GLInAppPurchase_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_GLInAppPurchase_Tests.framework; path = "Pods-GLInAppPurchase_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3733FD72AF13823A15A5694E710F3723 /* GLInAppPurchase.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GLInAppPurchase.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		39074A9FD2248072793F4A663642FBD0 /* GLInAppPurchaseUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GLInAppPurchaseUI.swift; sourceTree = "<group>"; };
 		3FD44A21BC04411F9BE667050B446C37 /* Pods-GLInAppPurchase_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLInAppPurchase_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		4410D8BCF5ADA572F798ADFBE5AADFD5 /* GLInAppPurchaseUI.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = GLInAppPurchaseUI.xib; sourceTree = "<group>"; };
 		46163398D3577E935FC3E0BEBBA55B3A /* Pods-GLInAppPurchase_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLInAppPurchase_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4737970360FF025780CDEA112A7A326E /* Pods-GLInAppPurchase_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLInAppPurchase_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		47F17D9D96FEFA2D9C1B2C5037926F4C /* Pods-GLInAppPurchase_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GLInAppPurchase_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		56C89E4D327C9D5CCEA3AD6DD2271B05 /* Pods-GLInAppPurchase_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLInAppPurchase_Tests-dummy.m"; sourceTree = "<group>"; };
 		58B7E4A1A587727CCC69F7F0F70866EC /* Pods-GLInAppPurchase_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLInAppPurchase_Tests-resources.sh"; sourceTree = "<group>"; };
 		5A6335CE24F41E90CCC040AF28E148DC /* Pods-GLInAppPurchase_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GLInAppPurchase_Example-dummy.m"; sourceTree = "<group>"; };
+		60CBBACBE56BB69C685AF0D041F13185 /* Pods_GLInAppPurchase_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLInAppPurchase_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		67B4948625F053B496A4A27BAF65EBC5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A068B7E68BB755FC1183A0415574137 /* Pods-GLInAppPurchase_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GLInAppPurchase_Example.modulemap"; sourceTree = "<group>"; };
-		7E95C378D667FBAC58BB0237647CE935 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		6A068B7E68BB755FC1183A0415574137 /* Pods-GLInAppPurchase_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GLInAppPurchase_Example.modulemap"; sourceTree = "<group>"; };
+		7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7F8FF11A3FA830ED36A5E9C9B8900475 /* GLInAppPurchase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GLInAppPurchase.xcconfig; sourceTree = "<group>"; };
+		816B06DBB2714FF121BB4B8F400F6B8F /* GLInAppPurchase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GLInAppPurchase.modulemap; sourceTree = "<group>"; };
 		82CE1587ED935F88CB1B49B15D65C6D1 /* Pods-GLInAppPurchase_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLInAppPurchase_Example-frameworks.sh"; sourceTree = "<group>"; };
-		882967AF056B699A362E6849DE6F435E /* GLInAppPurchase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GLInAppPurchase.modulemap; sourceTree = "<group>"; };
+		85D30D72A3D5C0635EB2AE9FB911F157 /* Pods_GLInAppPurchase_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLInAppPurchase_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A86CF588472566F2F477DD30E50AA53 /* Pods-GLInAppPurchase_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GLInAppPurchase_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8DEC438E30C86E7C2A8513A4BD031538 /* Pods-GLInAppPurchase_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLInAppPurchase_Example-resources.sh"; sourceTree = "<group>"; };
 		927DE33569F5143FD8234F9DA148823A /* Pods-GLInAppPurchase_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLInAppPurchase_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B1B8B1FFD385BDE3BF4C56CC34766020 /* Pods-GLInAppPurchase_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-GLInAppPurchase_Tests.modulemap"; sourceTree = "<group>"; };
+		92F9D818D766C73FEB44AA86FF323104 /* GLInAppPurchase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GLInAppPurchase-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AFFFAAB04ADA2A391BE9361CACEC776D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B8B1FFD385BDE3BF4C56CC34766020 /* Pods-GLInAppPurchase_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GLInAppPurchase_Tests.modulemap"; sourceTree = "<group>"; };
 		BA73172F8BFC32732F186574E154B80F /* Pods-GLInAppPurchase_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GLInAppPurchase_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		C59BE28E1B94EE66D9193FD970014BF6 /* Pods-GLInAppPurchase_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GLInAppPurchase_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D0203A3763FEFE575DA8D03502E554E6 /* GLInAppPurchase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GLInAppPurchase.framework; path = GLInAppPurchase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA6D17BB3838A61CA6AF40D75B3A7DC0 /* ResourceBundle-GLInAppPurchase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-GLInAppPurchase-Info.plist"; sourceTree = "<group>"; };
+		F5CDD2B7F3922D6BED1BFDE7692C939D /* GLInAppPurchase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GLInAppPurchase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEB1314844003A5CA53BF7BBA8CEC9B8 /* Pods-GLInAppPurchase_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GLInAppPurchase_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5F3D15823190129D7C6E9F956FA0B611 /* Frameworks */ = {
+		395EC5FD869294C20792C037D1C865E3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10285AE8DCDF884B6B3CED8A93D26471 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,67 +103,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8CD7C355E00181323F854ED9E38581C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05FD0B4A776C1C16C0AEF553CFBCF969 /* Foundation.framework in Frameworks */,
+				D23A20D37A2E0CC631665C05BDAD25CE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11506E655F45E74E82ED7EADADABC2C1 /* GLInAppPurchase */ = {
+		1852B4A39EC8CC9223CB484CD49CE860 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6F552E411F8934CF3386BC5CA73E5115 /* GLInAppPurchase */,
-				7057663E9D132B4479B18C8A447C63C5 /* Support Files */,
+				5391C7A973D2EA5A7A8581991396FE1D /* GLInAppPurchase */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3135E545C6474CEEF4130E5C079EAFFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3733FD72AF13823A15A5694E710F3723 /* GLInAppPurchase.bundle */,
+				F5CDD2B7F3922D6BED1BFDE7692C939D /* GLInAppPurchase.framework */,
+				85D30D72A3D5C0635EB2AE9FB911F157 /* Pods_GLInAppPurchase_Example.framework */,
+				60CBBACBE56BB69C685AF0D041F13185 /* Pods_GLInAppPurchase_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FD8E4DB4A718405CEF8B7FC53F12672 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6EE98446B568159EE277B68FD442AF0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E6ED5A90964D6AD92DB629570442D2E /* GLInAppPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				806F46D51E9F473900496A0B /* GLInAppPurchase */,
+				1852B4A39EC8CC9223CB484CD49CE860 /* Resources */,
+				5067CAE66BE9E643198AB2DB869C461C /* Support Files */,
 			);
 			name = GLInAppPurchase;
 			path = ../..;
 			sourceTree = "<group>";
 		};
-		35108CE9D2B984FB51A80E2D533E6597 /* Products */ = {
+		5067CAE66BE9E643198AB2DB869C461C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D0203A3763FEFE575DA8D03502E554E6 /* GLInAppPurchase.framework */,
-				0FB834CB60E8F0621671F0FC378DB725 /* Pods_GLInAppPurchase_Example.framework */,
-				399E0B6144864559326A6AC6D1E78DCA /* Pods_GLInAppPurchase_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		468EDB5AF219926271D82F526A0A322F /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				7E95C378D667FBAC58BB0237647CE935 /* ReplaceMe.swift */,
-			);
-			name = Classes;
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		6F552E411F8934CF3386BC5CA73E5115 /* GLInAppPurchase */ = {
-			isa = PBXGroup;
-			children = (
-				468EDB5AF219926271D82F526A0A322F /* Classes */,
-			);
-			name = GLInAppPurchase;
-			path = GLInAppPurchase;
-			sourceTree = "<group>";
-		};
-		7057663E9D132B4479B18C8A447C63C5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				882967AF056B699A362E6849DE6F435E /* GLInAppPurchase.modulemap */,
-				159BD02188C30C07DBC857BF1771C5ED /* GLInAppPurchase.xcconfig */,
-				209BA1E90B4A301016F7A84D5BC70C3B /* GLInAppPurchase-dummy.m */,
-				3436194D467371A942140C96FB1378C9 /* GLInAppPurchase-prefix.pch */,
-				163DC40C575FB531EC318E78F445802F /* GLInAppPurchase-umbrella.h */,
-				38ADB03D04650BC812CB8BA1CD2C9FA4 /* Info.plist */,
+				816B06DBB2714FF121BB4B8F400F6B8F /* GLInAppPurchase.modulemap */,
+				7F8FF11A3FA830ED36A5E9C9B8900475 /* GLInAppPurchase.xcconfig */,
+				92F9D818D766C73FEB44AA86FF323104 /* GLInAppPurchase-dummy.m */,
+				26F77042138BD6BC3C03DA471414518D /* GLInAppPurchase-prefix.pch */,
+				2273C5EED669D40B10AB114174AC5351 /* GLInAppPurchase-umbrella.h */,
+				AFFFAAB04ADA2A391BE9361CACEC776D /* Info.plist */,
+				CA6D17BB3838A61CA6AF40D75B3A7DC0 /* ResourceBundle-GLInAppPurchase-Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/GLInAppPurchase";
 			sourceTree = "<group>";
 		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+		5391C7A973D2EA5A7A8581991396FE1D /* GLInAppPurchase */ = {
 			isa = PBXGroup;
 			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+				3FD8E4DB4A718405CEF8B7FC53F12672 /* Classes */,
 			);
-			name = iOS;
+			path = GLInAppPurchase;
 			sourceTree = "<group>";
 		};
 		7915AA1AD0909D490260045802AFED34 /* Pods-GLInAppPurchase_Example */ = {
@@ -174,11 +205,37 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				F8D1DC2C2F5A67A09D05C6FC420A61E0 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				35108CE9D2B984FB51A80E2D533E6597 /* Products */,
+				A0C73549615C4D9421A4BD93146D8119 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				3135E545C6474CEEF4130E5C079EAFFD /* Products */,
 				EEE2B817ED9F3B8E0E972061821BC628 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		806F46D51E9F473900496A0B /* GLInAppPurchase */ = {
+			isa = PBXGroup;
+			children = (
+				B2A425B3284981B87846ADE95AC69BC1 /* Classes */,
+			);
+			name = GLInAppPurchase;
+			sourceTree = "<group>";
+		};
+		A0C73549615C4D9421A4BD93146D8119 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E6ED5A90964D6AD92DB629570442D2E /* GLInAppPurchase */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		B2A425B3284981B87846ADE95AC69BC1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				39074A9FD2248072793F4A663642FBD0 /* GLInAppPurchaseUI.swift */,
+				4410D8BCF5ADA572F798ADFBE5AADFD5 /* GLInAppPurchaseUI.xib */,
+			);
+			name = Classes;
+			path = GLInAppPurchase/Classes;
 			sourceTree = "<group>";
 		};
 		B4586A12CE396AD8F659DC442F900943 /* Pods-GLInAppPurchase_Tests */ = {
@@ -199,12 +256,13 @@
 			path = "Target Support Files/Pods-GLInAppPurchase_Tests";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		E6EE98446B568159EE277B68FD442AF0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				616BEB51ECCAD129BDBCB7A956B56CC6 /* Foundation.framework */,
+				7EC994CDC2D681BA26389F78A7E4B325 /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		EEE2B817ED9F3B8E0E972061821BC628 /* Targets Support Files */ = {
@@ -214,14 +272,6 @@
 				B4586A12CE396AD8F659DC442F900943 /* Pods-GLInAppPurchase_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F8D1DC2C2F5A67A09D05C6FC420A61E0 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				11506E655F45E74E82ED7EADADABC2C1 /* GLInAppPurchase */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,11 +285,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5A17679E6500632CF17852430277551D /* Headers */ = {
+		91F976F5C5C559A802BAA9E54602D7DF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EB37D6673D20566497AC0A38B5BF0D9 /* GLInAppPurchase-umbrella.h in Headers */,
+				DDED05144EF4DFE8FEE850371AC86A59 /* GLInAppPurchase-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +304,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0AECB23E1FA94B398E5657661BA784CE /* GLInAppPurchase-GLInAppPurchase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0D23F6A6A340028A21C9ED3BCE5E2E /* Build configuration list for PBXNativeTarget "GLInAppPurchase-GLInAppPurchase" */;
+			buildPhases = (
+				34C9239F7609D850A9AAC4DB010219C5 /* Sources */,
+				395EC5FD869294C20792C037D1C865E3 /* Frameworks */,
+				D14834FE3212CF280F5ACC86626D1525 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GLInAppPurchase-GLInAppPurchase";
+			productName = "GLInAppPurchase-GLInAppPurchase";
+			productReference = 3733FD72AF13823A15A5694E710F3723 /* GLInAppPurchase.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		5A09943DC6C7F8EE0BC35144BF820FC8 /* Pods-GLInAppPurchase_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC577A67FA905230067C22A86A2DAACC /* Build configuration list for PBXNativeTarget "Pods-GLInAppPurchase_Tests" */;
@@ -268,7 +335,7 @@
 			);
 			name = "Pods-GLInAppPurchase_Tests";
 			productName = "Pods-GLInAppPurchase_Tests";
-			productReference = 399E0B6144864559326A6AC6D1E78DCA /* Pods_GLInAppPurchase_Tests.framework */;
+			productReference = 60CBBACBE56BB69C685AF0D041F13185 /* Pods_GLInAppPurchase_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		95B6F225829A769E5864627BD4DE99AA /* Pods-GLInAppPurchase_Example */ = {
@@ -286,24 +353,26 @@
 			);
 			name = "Pods-GLInAppPurchase_Example";
 			productName = "Pods-GLInAppPurchase_Example";
-			productReference = 0FB834CB60E8F0621671F0FC378DB725 /* Pods_GLInAppPurchase_Example.framework */;
+			productReference = 85D30D72A3D5C0635EB2AE9FB911F157 /* Pods_GLInAppPurchase_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AC5B8F144CDAFFCD8B70AA17444DBD4E /* GLInAppPurchase */ = {
+		A27D8CE5398875097B0412D375B0942E /* GLInAppPurchase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E2403002654247283398D46DFB43A37 /* Build configuration list for PBXNativeTarget "GLInAppPurchase" */;
+			buildConfigurationList = C272C3258770F13C72A6FBEB9432921D /* Build configuration list for PBXNativeTarget "GLInAppPurchase" */;
 			buildPhases = (
-				8FA1D985D8231FC3A43F415D1499F545 /* Sources */,
-				5F3D15823190129D7C6E9F956FA0B611 /* Frameworks */,
-				5A17679E6500632CF17852430277551D /* Headers */,
+				A4698CD9C646CDB1A571E8D562EF4D28 /* Sources */,
+				F8CD7C355E00181323F854ED9E38581C /* Frameworks */,
+				1BD1FAD2DC44D8809ECCCBEA23820BCA /* Resources */,
+				91F976F5C5C559A802BAA9E54602D7DF /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				078734A93BECAC80D2894E6B8DE29809 /* PBXTargetDependency */,
 			);
 			name = GLInAppPurchase;
 			productName = GLInAppPurchase;
-			productReference = D0203A3763FEFE575DA8D03502E554E6 /* GLInAppPurchase.framework */;
+			productReference = F5CDD2B7F3922D6BED1BFDE7692C939D /* GLInAppPurchase.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -323,18 +392,45 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 35108CE9D2B984FB51A80E2D533E6597 /* Products */;
+			productRefGroup = 3135E545C6474CEEF4130E5C079EAFFD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AC5B8F144CDAFFCD8B70AA17444DBD4E /* GLInAppPurchase */,
+				A27D8CE5398875097B0412D375B0942E /* GLInAppPurchase */,
+				0AECB23E1FA94B398E5657661BA784CE /* GLInAppPurchase-GLInAppPurchase */,
 				95B6F225829A769E5864627BD4DE99AA /* Pods-GLInAppPurchase_Example */,
 				5A09943DC6C7F8EE0BC35144BF820FC8 /* Pods-GLInAppPurchase_Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		1BD1FAD2DC44D8809ECCCBEA23820BCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5DB090776AC40B14FAC8D7747D6EB9A /* GLInAppPurchase.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D14834FE3212CF280F5ACC86626D1525 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A036CF86F2DAD599035977F252321A32 /* GLInAppPurchaseUI.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		34C9239F7609D850A9AAC4DB010219C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4C387BA23AB839A66DAF4BBF59B19A50 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,12 +439,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FA1D985D8231FC3A43F415D1499F545 /* Sources */ = {
+		A4698CD9C646CDB1A571E8D562EF4D28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6B93812E505E3E871C614AA5539CD5A /* GLInAppPurchase-dummy.m in Sources */,
-				F999277687D86F9DC0AC1FE511636124 /* ReplaceMe.swift in Sources */,
+				E706818E98A69F06169A6C04E69169F6 /* GLInAppPurchase-dummy.m in Sources */,
+				66286A73E5405ECAEB78E1C6D1F23F6F /* GLInAppPurchaseUI.swift in Sources */,
+				34F80A325B7547E5B092C5D8D106080B /* GLInAppPurchaseUI.xib in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,48 +460,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		078734A93BECAC80D2894E6B8DE29809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GLInAppPurchase-GLInAppPurchase";
+			target = 0AECB23E1FA94B398E5657661BA784CE /* GLInAppPurchase-GLInAppPurchase */;
+			targetProxy = 6BAB1011986FBD593B2B89257DA23FC2 /* PBXContainerItemProxy */;
+		};
 		2E8EF55C0722AD9921D9B336C457D617 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GLInAppPurchase;
-			target = AC5B8F144CDAFFCD8B70AA17444DBD4E /* GLInAppPurchase */;
+			target = A27D8CE5398875097B0412D375B0942E /* GLInAppPurchase */;
 			targetProxy = 8CDBBE68DFC90F6EA64FB7E14B682BEB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00FA960F003E4585B039E4C2084420AF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 159BD02188C30C07DBC857BF1771C5ED /* GLInAppPurchase.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GLInAppPurchase/GLInAppPurchase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GLInAppPurchase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GLInAppPurchase/GLInAppPurchase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = GLInAppPurchase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		04E662488977FADDBE3D41543B008FD9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 46163398D3577E935FC3E0BEBBA55B3A /* Pods-GLInAppPurchase_Tests.debug.xcconfig */;
@@ -439,6 +509,56 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		24BC36D848A37E53C1325BFBF7BD99B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8FF11A3FA830ED36A5E9C9B8900475 /* GLInAppPurchase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GLInAppPurchase/GLInAppPurchase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GLInAppPurchase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GLInAppPurchase/GLInAppPurchase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GLInAppPurchase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		424767428B777F132D575AA1024A2EC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8FF11A3FA830ED36A5E9C9B8900475 /* GLInAppPurchase.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GLInAppPurchase";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/GLInAppPurchase/ResourceBundle-GLInAppPurchase-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = GLInAppPurchase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 		50A743D578999B721E9D024CF3781171 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -510,6 +630,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		662AB0CD5679B77009523390D27B07B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F8FF11A3FA830ED36A5E9C9B8900475 /* GLInAppPurchase.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GLInAppPurchase/GLInAppPurchase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GLInAppPurchase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GLInAppPurchase/GLInAppPurchase.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GLInAppPurchase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		6F39741EEEDE2962B5E705BFA5C28A8C /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -630,37 +782,22 @@
 			};
 			name = Debug;
 		};
-		DC5F3B4CBF428CFD110924046BCA1F60 /* Release */ = {
+		BEEEF38C70C869C6E22A64398802E085 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 159BD02188C30C07DBC857BF1771C5ED /* GLInAppPurchase.xcconfig */;
+			baseConfigurationReference = 7F8FF11A3FA830ED36A5E9C9B8900475 /* GLInAppPurchase.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/GLInAppPurchase";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GLInAppPurchase/GLInAppPurchase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GLInAppPurchase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = "Target Support Files/GLInAppPurchase/ResourceBundle-GLInAppPurchase-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GLInAppPurchase/GLInAppPurchase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = GLInAppPurchase;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -674,20 +811,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E2403002654247283398D46DFB43A37 /* Build configuration list for PBXNativeTarget "GLInAppPurchase" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00FA960F003E4585B039E4C2084420AF /* Debug */,
-				DC5F3B4CBF428CFD110924046BCA1F60 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9E1E4E48AF2EAB23169E611BF694090A /* Debug */,
 				8DED8AD26D381A6ACFF202E5217EC498 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C272C3258770F13C72A6FBEB9432921D /* Build configuration list for PBXNativeTarget "GLInAppPurchase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24BC36D848A37E53C1325BFBF7BD99B5 /* Debug */,
+				662AB0CD5679B77009523390D27B07B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0D23F6A6A340028A21C9ED3BCE5E2E /* Build configuration list for PBXNativeTarget "GLInAppPurchase-GLInAppPurchase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEEEF38C70C869C6E22A64398802E085 /* Debug */,
+				424767428B777F132D575AA1024A2EC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
