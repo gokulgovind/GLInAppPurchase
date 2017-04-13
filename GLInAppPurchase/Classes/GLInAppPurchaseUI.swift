@@ -169,7 +169,20 @@ let APP_DELEGATE = UIApplication.sharedApplication()
     @objc public func dismissBanner() {
         didSelectHandler = nil
         actionArray = [GLInAppAction]()
+        
+        bannerTheme = [UIColor(netHex:0x702EBE), UIColor(netHex:0xB635F5)]
+        bannerTitleColor = UIColor.whiteColor()
+        bannerTitle = String()
+        bannerSubTitle = String()
+        buttonTheme = [UIColor(netHex:0xF90069), UIColor(netHex:0xFC6143)]
+        buttonTitleColor = UIColor.whiteColor()
+        fullVersionFeatures_ImageSet = [UIImage:String]()
+        purchaseButtonName = "BOOST ME"
+        cancelButtonName = "NO, THANKS"
         bannerView.removeFromSuperview()
+        bannerView = ContainerView()
+        
+        
     }
     
     private func setUpInAppPurchaseBanner(){

@@ -22,7 +22,108 @@ class ViewController: UIViewController {
     }
 
     @IBAction func Check(sender: AnyObject) {
+        let actionSheet = UIAlertController(title: "Select Style", message: nil, preferredStyle: .ActionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Demo1", style: .Default, handler: { (action) in
+            self.demo1()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Demo2", style: .Default, handler: { (action) in
+            self.demo2()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Demo3", style: .Default, handler: { (action) in
+            self.demo3()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Demo4", style: .Default, handler: { (action) in
+            self.demo4()
+        }))
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        self.navigationController?.presentViewController(actionSheet, animated: true, completion: nil)
+        
+        
+    }
+    
+    func showSimpleAlert(message:String) {
+        dispatch_async(dispatch_get_main_queue()) { 
+            let alert = UIAlertController(title: "Completion Handler", message: message, preferredStyle: .Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+            self.navigationController?.presentViewController(alert, animated: true, completion: nil)
+        }
+       
+    }
+    
+    func demo1() {
         let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
+        
+        appBanner.displayContent(imageSetWithDescription:
+            [
+                UIImage(named:"IMG_1")!:"Rewind Your Last Swipe##Go back and swipe again",
+                UIImage(named:"IMG_2")!:"",
+                UIImage(named:"IMG_3")!:"Send More Super Likes##Let them know you are interested",
+            ])
+        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (str) in
+            print(str)
+            if str == "NO, THANKS" {
+            }
+            appBanner.dismissBanner()
+            self.showSimpleAlert("\(str) Button Clicked")
+        }
+        
+        appBanner.addAction(GLInAppAction(title: "10", subTitle: "Boosts", price: "₹155.00/ea", handler: { (actin) in
+            print("Completion handler called \(actin.actionSubTitle) Boost For \(actin.actionPrice)")
+        }))
+        
+        appBanner.addAction(GLInAppAction(title: "5", subTitle: "Boosts", price: "₹184.00/ea", handler: { (action) in
+            print("Completion handler called \(action.actionSubTitle) Boost For \(action.actionPrice)")
+        }))
+        
+        appBanner.addAction(GLInAppAction(title: "1", subTitle: "Boosts", price: "₹250.00/ea", handler: { (action) in
+            print("Completion handler called \(action.actionSubTitle) Boost For \(action.actionPrice)")
+        }))
+        
+        appBanner.presentBanner()
+    }
+    
+    func demo2() {
+        let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
+        
+        appBanner.displayContent(imageSetWithDescription:
+            [
+                UIImage(named:"IMG_1")!:"Rewind Your Last Swipe##Go back and swipe again",
+                UIImage(named:"IMG_2")!:"",
+                UIImage(named:"IMG_3")!:"Send More Super Likes##Let them know you are interested",
+            ])
+        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (str) in
+            print(str)
+            if str == "NO, THANKS" {
+            }
+            appBanner.dismissBanner()
+            self.showSimpleAlert("\(str) Button Clicked")
+        }
+        appBanner.setBannerTheme([UIColor.whiteColor()], headerTextColor: UIColor.blackColor())
+        appBanner.setButtomTheme([UIColor.blueColor(),UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.whiteColor())
+        
+        
+        appBanner.presentBanner()
+    }
+    
+    func demo3() {
+        let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
+        
+        
+        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (str) in
+            print(str)
+            if str == "NO, THANKS" {
+            }
+            appBanner.dismissBanner()
+            self.showSimpleAlert("\(str) Button Clicked")
+        }
+        appBanner.setBannerTheme([UIColor.whiteColor()], headerTextColor: UIColor.blackColor())
+        appBanner.setButtomTheme([UIColor.blueColor(),UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.whiteColor())
+        
+        appBanner.presentBanner()
+    }
+    
+    func demo4() {
+        let appBanner = GLInAppPurchaseUI(title: "Demo 4", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
         
         appBanner.displayContent(imageSetWithDescription:
             [
@@ -60,15 +161,6 @@ class ViewController: UIViewController {
         
         
         appBanner.presentBanner()
-    }
-    
-    func showSimpleAlert(message:String) {
-        dispatch_async(dispatch_get_main_queue()) { 
-            let alert = UIAlertController(title: "Completion Handler", message: message, preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-            self.navigationController?.presentViewController(alert, animated: true, completion: nil)
-        }
-       
     }
 }
 
