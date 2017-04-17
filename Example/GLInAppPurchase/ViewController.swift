@@ -59,24 +59,26 @@ class ViewController: UIViewController {
                 UIImage(named:"IMG_2")!:"",
                 UIImage(named:"IMG_3")!:"Send More Super Likes##Let them know you are interested",
             ])
-        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (str) in
-            print(str)
-            if str == "NO, THANKS" {
+        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (selectedTitle, isOptionSelected, selectedAction) in
+            if isOptionSelected {  //Some Option have been selected
+                print("Selected Price \(selectedAction.actionPrice)")
+            }
+            if selectedTitle == "NO, THANKS" { //selectedButtonTitle
             }
             appBanner.dismissBanner()
-            self.showSimpleAlert("\(str) Button Clicked")
+            self.showSimpleAlert("\(selectedTitle) Button Clicked")
         }
         
         appBanner.addAction(GLInAppAction(title: "10", subTitle: "Boosts", price: "₹155.00/ea", handler: { (actin) in
-            print("Completion handler called \(actin.actionSubTitle) Boost For \(actin.actionPrice)")
+            print("Completion handler called \(actin.actionSubTitle) For \(actin.actionPrice)")
         }))
         
         appBanner.addAction(GLInAppAction(title: "5", subTitle: "Boosts", price: "₹184.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) Boost For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
         }))
         
         appBanner.addAction(GLInAppAction(title: "1", subTitle: "Boosts", price: "₹250.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) Boost For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
         }))
         
         appBanner.presentBanner()
@@ -91,13 +93,17 @@ class ViewController: UIViewController {
                 UIImage(named:"IMG_2")!:"",
                 UIImage(named:"IMG_3")!:"Send More Super Likes##Let them know you are interested",
             ])
-        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (str) in
-            print(str)
-            if str == "NO, THANKS" {
+        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (selectedTitle, isOptionSelected, selectedAction) in
+            if isOptionSelected {  //Some Option have been selected
+                print("Selected Price \(selectedAction.actionPrice)")
+            }
+            if selectedTitle == "NO, THANKS" { //selectedButtonTitle
             }
             appBanner.dismissBanner()
-            self.showSimpleAlert("\(str) Button Clicked")
+             self.showSimpleAlert("\(selectedTitle) Button Clicked")
         }
+        
+        
         appBanner.setBannerTheme([UIColor.whiteColor()], headerTextColor: UIColor.blackColor())
         appBanner.setButtomTheme([UIColor.blueColor(),UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.whiteColor())
         
@@ -109,13 +115,14 @@ class ViewController: UIViewController {
         let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
         
         
-        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (str) in
-            print(str)
-            if str == "NO, THANKS" {
+        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (selectedTitle, isOptionSelected, selectedAction) in
+            if selectedTitle == "NO, THANKS" { //selectedButtonTitle
             }
             appBanner.dismissBanner()
-            self.showSimpleAlert("\(str) Button Clicked")
+            self.showSimpleAlert("\(selectedTitle) Button Clicked")
         }
+        
+        
         appBanner.setBannerTheme([UIColor.whiteColor()], headerTextColor: UIColor.blackColor())
         appBanner.setButtomTheme([UIColor.blueColor(),UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.whiteColor())
         
@@ -131,32 +138,35 @@ class ViewController: UIViewController {
                 UIImage(named:"IMG_2")!:"",
                 UIImage(named:"IMG_3")!:"Send More Super Likes##Let them know you are interested",
             ])
-        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (str) in
-            print(str)
-            if str == "NO, THANKS" {
+        appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (selectedTitle, isOptionSelected, selectedAction) in
+            if isOptionSelected {  //Some Option have been selected
+                print("Selected Price \(selectedAction.actionPrice)")
+            }
+            if selectedTitle == "NO, THANKS" { //selectedButtonTitle
             }
             appBanner.dismissBanner()
-            self.showSimpleAlert("\(str) Button Clicked")
+            self.showSimpleAlert("\(selectedTitle) Button Clicked")
         }
+        
         appBanner.setBannerTheme([UIColor.whiteColor()], headerTextColor: UIColor.blackColor())
         appBanner.setButtomTheme([UIColor.blueColor(),UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.whiteColor())
         
         appBanner.addAction(GLInAppAction(title: "10", subTitle: "Boosts", price: "₹155.00/ea", handler: { (actin) in
-            print("Completion handler called \(actin.actionSubTitle) Boost For \(actin.actionPrice)")
+            print("Completion handler called \(actin.actionSubTitle) For \(actin.actionPrice)")
         }))
         
         appBanner.addAction(GLInAppAction(title: "5", subTitle: "Boosts", price: "₹184.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) Boost For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
         }))
         
         appBanner.addAction(GLInAppAction(title: "1", subTitle: "Boosts", price: "₹250.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) Boost For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
         }))
         appBanner.addAction(GLInAppAction(title: "6", subTitle: "Boosts", price: "₹184.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) Boost For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
         }))
         appBanner.addAction(GLInAppAction(title: "7", subTitle: "Boosts", price: "₹250.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) Boost For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
         }))
         
         

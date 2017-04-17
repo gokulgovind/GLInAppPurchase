@@ -55,7 +55,7 @@ var cancelButtonName:String = "NO, THANKS"
 var bannerView:ContainerView!
 /// Gives user an option to change background style, Default style is .DarkStyle
 var backGroundStyle:BackGroundStyle = .DarkStyle
-var didSelectHandler:((title: String) -> Void)?
+var didSelectHandler:((selectedButton:String, isOptionSelected:Bool, selectedAction:GLInAppAction) -> Void)?
 /// All acction's added to GLInAppPurchaseUI will be appended in this array, Helps in returning right action on did select
 var actionArray = [GLInAppAction]()
 
@@ -147,7 +147,7 @@ let APP_DELEGATE = UIApplication.sharedApplication()
      
      - Returns: No return value.
      */
-    @objc public func addButtonWith(okayTitle:String,cancelTitle:String,completion:(String -> Void)){
+    @objc public func addButtonWith(okayTitle:String,cancelTitle:String,completion:((selectedTitle:String, isOptionSelected:Bool, selectedAction:GLInAppAction) -> Void)){
         purchaseButtonName = okayTitle
         cancelButtonName = cancelTitle
         didSelectHandler = completion
@@ -257,6 +257,8 @@ class ContainerView:UIView{
     
     var previousViewTag = -1
     var xPosition:CGFloat = 0.0
+    
+    var selctedOption:GLInAppAction!
 //MARK: Init:
     ///Init banner view from nib
     override init(frame: CGRect) {
@@ -461,7 +463,7 @@ class ContainerView:UIView{
             return
         }
         didselectHandler(action)
-        
+        selctedOption = action
         if previousViewTag != sender.view?.tag {
             sender.view?.applyGradient(buttonTheme, locations: nil, startPoint: nil, endPoint: nil)
             priceScrollView.scrollRectToVisible(CGRectMake((sender.view?.frame.origin.x)! - ((sender.view?.frame.size.width)! + 10), 0, priceScrollView.frame.size.width, priceScrollView.frame.size.height), animated: true)
@@ -493,11 +495,13 @@ class ContainerView:UIView{
     
     //MARK: ACTION:
     @IBAction func okayButton(sender:UIButton) {
-        didSelectHandler!(title: purchaseButtonName)
+        let check = selctedOption != nil ? true : false
+        didSelectHandler!(selectedButton:purchaseButtonName , isOptionSelected:check, selectedAction:check ? selctedOption : GLInAppAction())
     }
     
     @IBAction func cancelButton(sender:UIButton) {
-        didSelectHandler!(title: cancelButtonName)
+        let check = selctedOption != nil ? true : false
+         didSelectHandler!(selectedButton:cancelButtonName , isOptionSelected:check, selectedAction:check ? selctedOption : nil)
     }
 }
 
