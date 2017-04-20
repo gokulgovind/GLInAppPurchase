@@ -19,21 +19,21 @@ import UIKit
  */
 @objc public enum BackGroundStyle:Int {
     ///DefaultStyle: Default style does not add ant effect to UI, Simply adds the InAppPurchase Banner.
-    case DefaultStyle = 0
+    case defaultStyle = 0
     ///DarkStyle: It Presents the banner over a Black background with opacity of 0.90.
-    case DarkStyle
+    case darkStyle
     ///LightStyle: It Presents the banner over a White background with opacity of 0.90.
-    case LightStyle
+    case lightStyle
     ///LightStyleWithShadow: The banner will be presented with shadow and white Back ground.
-    case LightStyleWithShadow
+    case lightStyleWithShadow
     ///TransparentStyle: Will have a transparent back ground with opacity of 0.5.
-    case TransparentStyle
+    case transparentStyle
 }
 
 /// Default Banner Theme Color
 var bannerTheme = [UIColor(netHex:0x702EBE), UIColor(netHex:0xB635F5)]
 /// Default Banner Title Color
-var bannerTitleColor = UIColor.whiteColor()
+var bannerTitleColor = UIColor.white
 /// Bannner Title String, This Will Be Displayed On Top As Title
 var bannerTitle:String!
 /// Bannner Title String, This Will Be Displayed Next To Title As SubTitle
@@ -41,7 +41,7 @@ var bannerSubTitle:String!
 /// Default Button Theme Color
 var buttonTheme = [UIColor(netHex:0xF90069), UIColor(netHex:0xFC6143)]
 /// Default Button Title Color
-var buttonTitleColor = UIColor.whiteColor()
+var buttonTitleColor = UIColor.white
 
 /// Image Set Which Will Be Displayed In Banner's Scroll View
 var fullVersionFeatures_ImageSet = [UIImage:String]()
@@ -54,12 +54,12 @@ var cancelButtonName:String = "NO, THANKS"
 
 var bannerView:ContainerView!
 /// Gives user an option to change background style, Default style is .DarkStyle
-var backGroundStyle:BackGroundStyle = .DarkStyle
-var didSelectHandler:((selectedButton:String, isOptionSelected:Bool, selectedAction:GLInAppAction) -> Void)?
+var backGroundStyle:BackGroundStyle = .darkStyle
+var didSelectHandler:((_ selectedButton:String, _ isOptionSelected:Bool, _ selectedAction:GLInAppAction) -> Void)?
 /// All acction's added to GLInAppPurchaseUI will be appended in this array, Helps in returning right action on did select
 var actionArray = [GLInAppAction]()
 
-let APP_DELEGATE = UIApplication.sharedApplication()
+let APP_DELEGATE = UIApplication.shared
 
 /**
  A GLInAppPurchaseUI object displays an banner Title and subtitle to user along with Display Image Set,and 2 button action.
@@ -68,7 +68,7 @@ let APP_DELEGATE = UIApplication.sharedApplication()
  
  */
 
-@objc public class GLInAppPurchaseUI: NSObject {
+@objc open class GLInAppPurchaseUI: NSObject {
     
     /**
      Creates and returns a notification bar for displaying an alert to the user.
@@ -97,7 +97,7 @@ let APP_DELEGATE = UIApplication.sharedApplication()
      - Add imags as `key` and their discription as `value`.
      - The discription can be seprated by **##** , First part will be considered as **Title**, Rest as **SubTitle**
      */
-    @objc public func displayContent(imageSetWithDescription images:[UIImage:String]){
+    @objc open func displayContent(imageSetWithDescription images:[UIImage:String]){
         fullVersionFeatures_ImageSet = images
     }
     
@@ -109,7 +109,7 @@ let APP_DELEGATE = UIApplication.sharedApplication()
      - Parameter headerTextColor:   Header label text color
      
      */
-    @objc public func setBannerTheme(color:[UIColor], headerTextColor:UIColor){
+    @objc open func setBannerTheme(_ color:[UIColor], headerTextColor:UIColor){
         bannerTheme = color
         bannerTitleColor = headerTextColor
     }
@@ -122,7 +122,7 @@ let APP_DELEGATE = UIApplication.sharedApplication()
      - Parameter headerTextColor: Used to set button title color
      
      */
-    @objc public func setButtomTheme(color:[UIColor], buttonTextColor:UIColor){
+    @objc open func setButtomTheme(_ color:[UIColor], buttonTextColor:UIColor){
         buttonTheme = color
         buttonTitleColor = buttonTextColor
     }
@@ -134,7 +134,7 @@ let APP_DELEGATE = UIApplication.sharedApplication()
      
      - Returns: No return value.
      */
-    @objc public func addAction(action: GLInAppAction){
+    @objc open func addAction(_ action: GLInAppAction){
         actionArray.append(action)    //Action for notification didselect
     }
     
@@ -147,17 +147,17 @@ let APP_DELEGATE = UIApplication.sharedApplication()
      
      - Returns: No return value.
      */
-    @objc public func addButtonWith(okayTitle:String,cancelTitle:String,completion:((selectedTitle:String, isOptionSelected:Bool, selectedAction:GLInAppAction) -> Void)){
+    @objc open func addButtonWith(_ okayTitle:String,cancelTitle:String,completion:@escaping ((_ selectedTitle:String, _ isOptionSelected:Bool, _ selectedAction:GLInAppAction) -> Void)){
         purchaseButtonName = okayTitle
         cancelButtonName = cancelTitle
         didSelectHandler = completion
     }
     
     /// Presents the banner on top of all views
-    @objc public func presentBanner() {
+    @objc open func presentBanner() {
         if ((APP_DELEGATE.keyWindow?.subviews) == nil) {
-            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(5.0 * Double(NSEC_PER_SEC)))
-            dispatch_after(time, dispatch_get_main_queue(), {
+            let time = DispatchTime.now() + Double(Int64(5.0 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: time, execute: {
                 self.setUpInAppPurchaseBanner()
             })
         }else{
@@ -166,16 +166,16 @@ let APP_DELEGATE = UIApplication.sharedApplication()
     }
     
     /// Removes the banner from UI
-    @objc public func dismissBanner() {
+    @objc open func dismissBanner() {
         didSelectHandler = nil
         actionArray = [GLInAppAction]()
         
         bannerTheme = [UIColor(netHex:0x702EBE), UIColor(netHex:0xB635F5)]
-        bannerTitleColor = UIColor.whiteColor()
+        bannerTitleColor = UIColor.white
         bannerTitle = String()
         bannerSubTitle = String()
         buttonTheme = [UIColor(netHex:0xF90069), UIColor(netHex:0xFC6143)]
-        buttonTitleColor = UIColor.whiteColor()
+        buttonTitleColor = UIColor.white
         fullVersionFeatures_ImageSet = [UIImage:String]()
         purchaseButtonName = "BOOST ME"
         cancelButtonName = "NO, THANKS"
@@ -185,32 +185,32 @@ let APP_DELEGATE = UIApplication.sharedApplication()
         
     }
     
-    private func setUpInAppPurchaseBanner(){
+    fileprivate func setUpInAppPurchaseBanner(){
         bannerView = ContainerView()
         bannerView.translatesAutoresizingMaskIntoConstraints = false
         APP_DELEGATE.keyWindow?.addSubview(bannerView)
         
         var constraints = [NSLayoutConstraint]()
         
-        let bannerHorizontalConstraint = NSLayoutConstraint.constraintsWithVisualFormat("H:|[bannerView]|", options: [], metrics: nil, views: ["bannerView":bannerView])
+        let bannerHorizontalConstraint = NSLayoutConstraint.constraints(withVisualFormat: "H:|[bannerView]|", options: [], metrics: nil, views: ["bannerView":bannerView])
         constraints += bannerHorizontalConstraint
-        let bannerVerticalConstraint = NSLayoutConstraint.constraintsWithVisualFormat("V:|[bannerView]|", options: [], metrics: nil, views: ["bannerView":bannerView])
+        let bannerVerticalConstraint = NSLayoutConstraint.constraints(withVisualFormat: "V:|[bannerView]|", options: [], metrics: nil, views: ["bannerView":bannerView])
         constraints += bannerVerticalConstraint
         
-        NSLayoutConstraint.activateConstraints(constraints)
+        NSLayoutConstraint.activate(constraints)
     }
 }
 
 /**
  A GLInAppAction object represents an action that can be taken when tapping a button in an `GLInAppPurchaseUI`. You use this class to configure information about a single action, including the title to display in the button, and a handler to execute when the user taps the button. After creating an notificatio action object, add it to a `GLInAppPurchaseUI` object before displaying the corresponding notification to the user.
  */
-public class GLInAppAction : NSObject {
-    @objc public var actionTitle:String!
-    @objc public var actionSubTitle:String!
-    @objc public var actionPrice:String!
+open class GLInAppAction : NSObject {
+    @objc open var actionTitle:String!
+    @objc open var actionSubTitle:String!
+    @objc open var actionPrice:String!
     
-    @objc public var textResponse:String!
-    var didSelectAction:(GLInAppAction -> Void)?
+    @objc open var textResponse:String!
+    var didSelectAction:((GLInAppAction) -> Void)?
     
     @objc public override init() {
         super.init()
@@ -273,15 +273,15 @@ class ContainerView:UIView{
     }
     
     ///Init banner view from nib
-    private func commonInit() {
-        NSBundle(forClass: ContainerView.self)
+    fileprivate func commonInit() {
+        Bundle(for: ContainerView.self)
             .loadNibNamed("GLInAppPurchaseUI", owner:self, options:nil)
         guard let content = mainView else { return }
         content.frame = self.bounds
 //        content.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
         self.addSubview(content)
         
-         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(orientationChange(_:)), name: UIDeviceOrientationDidChangeNotification, object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(orientationChange(_:)), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
     ///Setup all the UI Components
@@ -297,20 +297,20 @@ class ContainerView:UIView{
         for image in fullVersionFeatures_ImageSet {
             let height = image.1.characters.count != 0 ? imageScrollView.frame.size.height - 45 : imageScrollView.frame.size.height
             
-            let imageView = UIImageView(frame: CGRectMake(x,0,width,height))
-            imageView.contentMode = UIViewContentMode.ScaleAspectFit
+            let imageView = UIImageView(frame: CGRect(x: x,y: 0,width: width,height: height))
+            imageView.contentMode = UIViewContentMode.scaleAspectFit
             imageView.image = image.0
             
             if image.1.characters.count != 0 {
-                let tempContainer = image.1.componentsSeparatedByString("##")
+                let tempContainer = image.1.components(separatedBy: "##")
                 
                 let attributeDescription = NSMutableAttributedString(string: String("\(tempContainer[0])\n\(tempContainer[1])"))
-                attributeDescription.addAttributes([NSFontAttributeName:UIFont.imageDescriptionBig(),NSForegroundColorAttributeName:UIColor.blackColor()], range: NSRange(location: 0, length: tempContainer[0].characters.count))
-                attributeDescription.addAttributes([NSFontAttributeName:UIFont.imageDescriptionSmall(),NSForegroundColorAttributeName:UIColor.lightGrayColor()], range: NSRange(location: tempContainer[0].characters.count, length: tempContainer[1].characters.count + 1))
+                attributeDescription.addAttributes([NSFontAttributeName:UIFont.imageDescriptionBig(),NSForegroundColorAttributeName:UIColor.black], range: NSRange(location: 0, length: tempContainer[0].characters.count))
+                attributeDescription.addAttributes([NSFontAttributeName:UIFont.imageDescriptionSmall(),NSForegroundColorAttributeName:UIColor.lightGray], range: NSRange(location: tempContainer[0].characters.count, length: tempContainer[1].characters.count + 1))
                 
-                let description = UILabel(frame: CGRectMake(x,imageView.frame.size.height,width,45))
+                let description = UILabel(frame: CGRect(x: x,y: imageView.frame.size.height,width: width,height: 45))
                 description.attributedText = attributeDescription
-                description.textAlignment = NSTextAlignment.Center
+                description.textAlignment = NSTextAlignment.center
                 description.numberOfLines = 2
                 imageScrollView.addSubview(description)
             }
@@ -321,12 +321,12 @@ class ContainerView:UIView{
             x = CGFloat(index) * width
         }
         
-        NSTimer.scheduledTimerWithTimeInterval(2.0, target:self, selector: #selector(slideShowImages(_:)), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 2.0, target:self, selector: #selector(slideShowImages(_:)), userInfo: nil, repeats: true)
 
         imagePageControl.numberOfPages = fullVersionFeatures_ImageSet.count
-        imagePageControl.hidden = fullVersionFeatures_ImageSet.count < 2 ? true : false
+        imagePageControl.isHidden = fullVersionFeatures_ImageSet.count < 2 ? true : false
         imageScrollView.delegate = self
-        imageScrollView.contentSize = CGSizeMake(x, imageScrollView.frame.size.height)
+        imageScrollView.contentSize = CGSize(width: x, height: imageScrollView.frame.size.height)
         
         //OfferList
         x = 5.0
@@ -335,10 +335,10 @@ class ContainerView:UIView{
         width = (priceScrollView.frame.size.width - 20) / count
         let height = priceScrollView.frame.size.height
         for offer in actionArray {
-            let view = UIView(frame: CGRectMake(x,0,width,height))
+            let view = UIView(frame: CGRect(x: x,y: 0,width: width,height: height))
             view.layer.cornerRadius = 5.0
             view.layer.borderWidth = 0.5
-            view.layer.borderColor = UIColor.grayColor().CGColor
+            view.layer.borderColor = UIColor.gray.cgColor
             view.clipsToBounds = true
             view.tag = index
             
@@ -346,26 +346,26 @@ class ContainerView:UIView{
             view.addGestureRecognizer(tapGesture)
             
             
-            let attributeOffers = NSMutableAttributedString(string: String("\(offer.actionTitle)\n\(offer.actionSubTitle)"))
-            attributeOffers.addAttributes([NSFontAttributeName:UIFont.priceListBoldFont(),NSForegroundColorAttributeName:UIColor.darkGrayColor()], range: NSRange(location: 0, length: offer.actionTitle.characters.count))
-            attributeOffers.addAttributes([NSFontAttributeName:UIFont.priceListThinFont(),NSForegroundColorAttributeName:UIColor.grayColor()], range: NSRange(location: offer.actionTitle.characters.count, length: offer.actionSubTitle.characters.count + 1))
+            let attributeOffers = NSMutableAttributedString(string: String("\(offer.actionTitle!)\n\(offer.actionSubTitle!)"))
+            attributeOffers.addAttributes([NSFontAttributeName:UIFont.priceListBoldFont(),NSForegroundColorAttributeName:UIColor.darkGray], range: NSRange(location: 0, length: offer.actionTitle.characters.count))
+            attributeOffers.addAttributes([NSFontAttributeName:UIFont.priceListThinFont(),NSForegroundColorAttributeName:UIColor.gray], range: NSRange(location: offer.actionTitle!.characters.count, length: offer.actionSubTitle!.characters.count + 1))
             
-            let label = UILabel(frame: CGRectMake(2,2,width - 4,height-20))
+            let label = UILabel(frame: CGRect(x: 2,y: 2,width: width - 4,height: height-20))
             label.attributedText = attributeOffers
-            label.textAlignment = NSTextAlignment.Center
+            label.textAlignment = NSTextAlignment.center
             label.numberOfLines = 0
-            label.backgroundColor = UIColor.whiteColor()
+            label.backgroundColor = UIColor.white
             label.layer.cornerRadius = 5.0
             label.clipsToBounds = true
             view.addSubview(label)
             
-            let priceLabel  = UILabel(frame: CGRectMake(2,height-20,width - 4,20))
+            let priceLabel  = UILabel(frame: CGRect(x: 2,y: height-20,width: width - 4,height: 20))
             priceLabel.tag = 10
-            priceLabel.backgroundColor = UIColor.clearColor()
+            priceLabel.backgroundColor = UIColor.clear
             priceLabel.font = UIFont.priceListBoldFontSmall()
-            priceLabel.textColor = UIColor.darkGrayColor()
-            priceLabel.text = offer.actionPrice
-            priceLabel.textAlignment = NSTextAlignment.Center
+            priceLabel.textColor = UIColor.darkGray
+            priceLabel.text = offer.actionPrice!
+            priceLabel.textAlignment = NSTextAlignment.center
             priceLabel.numberOfLines = 0
             view.addSubview(priceLabel)
             
@@ -376,8 +376,8 @@ class ContainerView:UIView{
             x = width + x + 5
         }
         priceScrollView.showsHorizontalScrollIndicator = false
-        priceScrollView.scrollEnabled = true
-        priceScrollView.contentSize = CGSizeMake(x, height)
+        priceScrollView.isScrollEnabled = true
+        priceScrollView.contentSize = CGSize(width: x, height: height)
         
         imageHeightConstraint.constant = fullVersionFeatures_ImageSet.count == 0 ? 0 : imageHeightConstraint.constant
         priceHeightConstraint.constant = actionArray.count == 0 ? 0 : priceHeightConstraint.constant
@@ -388,30 +388,30 @@ class ContainerView:UIView{
     ///Set's the back ground style for banner
     func setUpBackGround() {
         switch backGroundStyle {
-        case .DarkStyle:
+        case .darkStyle:
             viewContainer.layer.cornerRadius = 12.0
             viewContainer.clipsToBounds = true
-            mainView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.90)
+            mainView.backgroundColor = UIColor.black.withAlphaComponent(0.90)
             
             break
-        case .LightStyle:
+        case .lightStyle:
             viewContainer.layer.cornerRadius = 12.0
             viewContainer.clipsToBounds = true
             viewContainer.layer.borderWidth = 1.0
-            viewContainer.layer.borderColor = UIColor.lightGrayColor().CGColor
-            mainView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.90)
+            viewContainer.layer.borderColor = UIColor.lightGray.cgColor
+            mainView.backgroundColor = UIColor.white.withAlphaComponent(0.90)
             
             break
-        case .LightStyleWithShadow:
-            viewContainer.layer.shadowColor = UIColor.blackColor().CGColor
+        case .lightStyleWithShadow:
+            viewContainer.layer.shadowColor = UIColor.black.cgColor
             viewContainer.layer.shadowOpacity = 1
             viewContainer.layer.shadowOffset = CGSize.zero
             viewContainer.layer.shadowRadius = 10
-            viewContainer.layer.shadowPath = UIBezierPath(rect: viewContainer.bounds).CGPath
-            mainView.backgroundColor = UIColor.whiteColor()
+            viewContainer.layer.shadowPath = UIBezierPath(rect: viewContainer.bounds).cgPath
+            mainView.backgroundColor = UIColor.white
             
             break
-        case .TransparentStyle:
+        case .transparentStyle:
             viewContainer.layer.cornerRadius = 12.0
             viewContainer.clipsToBounds = true
             mainView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
@@ -421,15 +421,15 @@ class ContainerView:UIView{
             viewContainer.layer.cornerRadius = 12.0
             viewContainer.clipsToBounds = true
             viewContainer.layer.borderWidth = 1.0
-            viewContainer.layer.borderColor = UIColor.lightGrayColor().CGColor
-            mainView.backgroundColor = UIColor.clearColor()
+            viewContainer.layer.borderColor = UIColor.lightGray.cgColor
+            mainView.backgroundColor = UIColor.clear
             break
         }
     }
     
     ///Sets up user UI
     func setUpOtherUI() {
-        let attributeString = NSMutableAttributedString(string: String("\(bannerTitle)\n\(bannerSubTitle)"))
+        let attributeString = NSMutableAttributedString(string: String("\(bannerTitle!)\n\(bannerSubTitle!)"))
         attributeString.addAttributes([NSFontAttributeName:UIFont.titleFont()], range: NSRange(location: 0, length: bannerTitle.characters.count))
         headerLabel.attributedText = attributeString
         headerLabel.textColor = bannerTitleColor
@@ -440,23 +440,23 @@ class ContainerView:UIView{
     func setUpButtonUI(){
         purchaseButton.layer.cornerRadius = 14.0
         purchaseButton.clipsToBounds = true
-        purchaseButton.setTitle(purchaseButtonName, forState: .Normal)
-        purchaseButton.setTitleColor(buttonTitleColor, forState: .Normal)
-        purchaseButton.applyGradient(buttonTheme, locations: nil, startPoint: CGPointMake(0.0, 0.5), endPoint: CGPointMake(1.0, 0.5))
+        purchaseButton.setTitle(purchaseButtonName, for: UIControlState())
+        purchaseButton.setTitleColor(buttonTitleColor, for: UIControlState())
+        purchaseButton.applyGradient(buttonTheme, locations: nil, startPoint: CGPoint(x: 0.0, y: 0.5), endPoint: CGPoint(x: 1.0, y: 0.5))
         
-        cancelButton.setTitle(cancelButtonName, forState: .Normal)
+        cancelButton.setTitle(cancelButtonName, for: UIControlState())
     }
     
     ///Button action that used to detect tap on banner options
-    @IBAction func slideShowImages(sender:AnyObject?){
+    @IBAction func slideShowImages(_ sender:AnyObject?){
         let x = imageScrollView.frame.size.width * xPosition
-        imageScrollView.scrollRectToVisible(CGRectMake(x, 0, imageScrollView.frame.size.width, imageScrollView.frame.size.height), animated: true)
+        imageScrollView.scrollRectToVisible(CGRect(x: x, y: 0, width: imageScrollView.frame.size.width, height: imageScrollView.frame.size.height), animated: true)
         imagePageControl.currentPage = Int(xPosition)
         xPosition =  x > imageScrollView.contentSize.width ? 0 : xPosition + 1
     }
     
     
-    func tapGesture(sender:UITapGestureRecognizer) {
+    func tapGesture(_ sender:UITapGestureRecognizer) {
         
         let action:GLInAppAction = actionArray[(sender.view?.tag)!]
         guard let didselectHandler = action.didSelectAction else{
@@ -466,20 +466,20 @@ class ContainerView:UIView{
         selctedOption = action
         if previousViewTag != sender.view?.tag {
             sender.view?.applyGradient(buttonTheme, locations: nil, startPoint: nil, endPoint: nil)
-            priceScrollView.scrollRectToVisible(CGRectMake((sender.view?.frame.origin.x)! - ((sender.view?.frame.size.width)! + 10), 0, priceScrollView.frame.size.width, priceScrollView.frame.size.height), animated: true)
+            priceScrollView.scrollRectToVisible(CGRect(x: (sender.view?.frame.origin.x)! - ((sender.view?.frame.size.width)! + 10), y: 0, width: priceScrollView.frame.size.width, height: priceScrollView.frame.size.height), animated: true)
             for subViewLabel in sender.view!.subviews {
                 if subViewLabel.tag == 10 {
                     let label = subViewLabel as! UILabel
-                    label.textColor = UIColor.whiteColor()
+                    label.textColor = UIColor.white
                 }
             }
             for pView in priceScrollView.subviews{
                 if pView.tag == previousViewTag {
-                    pView.applyGradient([UIColor.whiteColor()], locations: nil, startPoint: nil, endPoint: nil)
+                    pView.applyGradient([UIColor.white], locations: nil, startPoint: nil, endPoint: nil)
                     for subViewLabel in pView.subviews {
                         if subViewLabel.tag == 10 {
                             let label = subViewLabel as! UILabel
-                            label.textColor = UIColor.darkGrayColor()
+                            label.textColor = UIColor.darkGray
                         }
                     }
                 }
@@ -489,32 +489,32 @@ class ContainerView:UIView{
         }
     }
     
-    func orientationChange(sender:NSNotification){
+    func orientationChange(_ sender:Notification){
         self.layoutIfNeeded()
     }
     
     //MARK: ACTION:
-    @IBAction func okayButton(sender:UIButton) {
+    @IBAction func okayButton(_ sender:UIButton) {
         let check = selctedOption != nil ? true : false
-        didSelectHandler!(selectedButton:purchaseButtonName , isOptionSelected:check, selectedAction:check ? selctedOption : GLInAppAction())
+        didSelectHandler!(purchaseButtonName , check, check ? selctedOption : GLInAppAction())
     }
     
-    @IBAction func cancelButton(sender:UIButton) {
+    @IBAction func cancelButton(_ sender:UIButton) {
         let check = selctedOption != nil ? true : false
-         didSelectHandler!(selectedButton:cancelButtonName , isOptionSelected:check, selectedAction:check ? selctedOption : nil)
+        didSelectHandler!(cancelButtonName , check, check ? selctedOption : GLInAppAction())
     }
 }
 
 //MARK: Extension:
 extension ContainerView:UIScrollViewDelegate{
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         imagePageControl.currentPage = Int(pageNumber)
         xPosition = pageNumber
     }
 }
 extension UIView {
-    func applyGradient(colours: [UIColor],locations:[NSNumber]?, startPoint:CGPoint?, endPoint:CGPoint?) -> Void {
+    func applyGradient(_ colours: [UIColor],locations:[NSNumber]?, startPoint:CGPoint?, endPoint:CGPoint?) -> Void {
 
         if (self.layer.sublayers != nil){  //Remove old layer.
             for subLayer in self.layer.sublayers! {
@@ -530,14 +530,14 @@ extension UIView {
         let gradient: CAGradientLayer = CAGradientLayer()
         gradient.removeFromSuperlayer()
         gradient.frame = self.bounds
-        gradient.colors = colours.map { $0.CGColor }
+        gradient.colors = colours.map { $0.cgColor }
         gradient.locations = locations
         if ((startPoint) != nil) {
             gradient.startPoint = startPoint!
             gradient.endPoint = endPoint!
         }
         
-        self.layer.insertSublayer(gradient, atIndex: 0)
+        self.layer.insertSublayer(gradient, at: 0)
     }
 }
 

@@ -21,37 +21,37 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func Check(sender: AnyObject) {
-        let actionSheet = UIAlertController(title: "Select Style", message: nil, preferredStyle: .ActionSheet)
-        actionSheet.addAction(UIAlertAction(title: "Demo1", style: .Default, handler: { (action) in
+    @IBAction func Check(_ sender: AnyObject) {
+        let actionSheet = UIAlertController(title: "Select Style", message: nil, preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Demo1", style: .default, handler: { (action) in
             self.demo1()
         }))
-        actionSheet.addAction(UIAlertAction(title: "Demo2", style: .Default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction(title: "Demo2", style: .default, handler: { (action) in
             self.demo2()
         }))
-        actionSheet.addAction(UIAlertAction(title: "Demo3", style: .Default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction(title: "Demo3", style: .default, handler: { (action) in
             self.demo3()
         }))
-        actionSheet.addAction(UIAlertAction(title: "Demo4", style: .Default, handler: { (action) in
+        actionSheet.addAction(UIAlertAction(title: "Demo4", style: .default, handler: { (action) in
             self.demo4()
         }))
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
-        self.navigationController?.presentViewController(actionSheet, animated: true, completion: nil)
+        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.navigationController?.present(actionSheet, animated: true, completion: nil)
         
         
     }
     
-    func showSimpleAlert(message:String) {
-        dispatch_async(dispatch_get_main_queue()) { 
-            let alert = UIAlertController(title: "Completion Handler", message: message, preferredStyle: .Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
-            self.navigationController?.presentViewController(alert, animated: true, completion: nil)
+    func showSimpleAlert(_ message:String) {
+        DispatchQueue.main.async { 
+            let alert = UIAlertController(title: "Completion Handler", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.navigationController?.present(alert, animated: true, completion: nil)
         }
        
     }
     
     func demo1() {
-        let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
+        let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .transparentStyle)
         
         appBanner.displayContent(imageSetWithDescription:
             [
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
             ])
         appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (selectedTitle, isOptionSelected, selectedAction) in
             if isOptionSelected {  //Some Option have been selected
-                print("Selected Price \(selectedAction.actionPrice)")
+                print("Selected Price \(selectedAction.actionPrice!)")
             }
             if selectedTitle == "NO, THANKS" { //selectedButtonTitle
             }
@@ -70,22 +70,22 @@ class ViewController: UIViewController {
         }
         
         appBanner.addAction(GLInAppAction(title: "10", subTitle: "Boosts", price: "₹155.00/ea", handler: { (actin) in
-            print("Completion handler called \(actin.actionSubTitle) For \(actin.actionPrice)")
+            print("Completion handler called \(actin.actionSubTitle!) For \(actin.actionPrice!)")
         }))
         
         appBanner.addAction(GLInAppAction(title: "5", subTitle: "Boosts", price: "₹184.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle!) For \(action.actionPrice!)")
         }))
         
         appBanner.addAction(GLInAppAction(title: "1", subTitle: "Boosts", price: "₹250.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle!) For \(action.actionPrice!)")
         }))
         
         appBanner.presentBanner()
     }
     
     func demo2() {
-        let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
+        let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .transparentStyle)
         
         appBanner.displayContent(imageSetWithDescription:
             [
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
             ])
         appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (selectedTitle, isOptionSelected, selectedAction) in
             if isOptionSelected {  //Some Option have been selected
-                print("Selected Price \(selectedAction.actionPrice)")
+                print("Selected Price \(selectedAction.actionPrice!)")
             }
             if selectedTitle == "NO, THANKS" { //selectedButtonTitle
             }
@@ -104,15 +104,15 @@ class ViewController: UIViewController {
         }
         
         
-        appBanner.setBannerTheme([UIColor.whiteColor()], headerTextColor: UIColor.blackColor())
-        appBanner.setButtomTheme([UIColor.blueColor(),UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.whiteColor())
+        appBanner.setBannerTheme([UIColor.white], headerTextColor: UIColor.black)
+        appBanner.setButtomTheme([UIColor.blue,UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.white)
         
         
         appBanner.presentBanner()
     }
     
     func demo3() {
-        let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
+        let appBanner = GLInAppPurchaseUI(title: "Skip The Line", subTitle: "Be first in the queue", bannerBackGroundStyle: .transparentStyle)
         
         
         appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (selectedTitle, isOptionSelected, selectedAction) in
@@ -123,14 +123,14 @@ class ViewController: UIViewController {
         }
         
         
-        appBanner.setBannerTheme([UIColor.whiteColor()], headerTextColor: UIColor.blackColor())
-        appBanner.setButtomTheme([UIColor.blueColor(),UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.whiteColor())
+        appBanner.setBannerTheme([UIColor.white], headerTextColor: UIColor.black)
+        appBanner.setButtomTheme([UIColor.blue,UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.white)
         
         appBanner.presentBanner()
     }
     
     func demo4() {
-        let appBanner = GLInAppPurchaseUI(title: "Demo 4", subTitle: "Be first in the queue", bannerBackGroundStyle: .TransparentStyle)
+        let appBanner = GLInAppPurchaseUI(title: "Demo 4", subTitle: "Be first in the queue", bannerBackGroundStyle: .transparentStyle)
         
         appBanner.displayContent(imageSetWithDescription:
             [
@@ -140,7 +140,7 @@ class ViewController: UIViewController {
             ])
         appBanner.addButtonWith("BOOST ME", cancelTitle: "NO, THANKS") { (selectedTitle, isOptionSelected, selectedAction) in
             if isOptionSelected {  //Some Option have been selected
-                print("Selected Price \(selectedAction.actionPrice)")
+                print("Selected Price \(selectedAction.actionPrice!)")
             }
             if selectedTitle == "NO, THANKS" { //selectedButtonTitle
             }
@@ -148,25 +148,25 @@ class ViewController: UIViewController {
             self.showSimpleAlert("\(selectedTitle) Button Clicked")
         }
         
-        appBanner.setBannerTheme([UIColor.whiteColor()], headerTextColor: UIColor.blackColor())
-        appBanner.setButtomTheme([UIColor.blueColor(),UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.whiteColor())
+        appBanner.setBannerTheme([UIColor.white], headerTextColor: UIColor.black)
+        appBanner.setButtomTheme([UIColor.blue,UIColor(netHex:0x2375F8)], buttonTextColor: UIColor.white)
         
         appBanner.addAction(GLInAppAction(title: "10", subTitle: "Boosts", price: "₹155.00/ea", handler: { (actin) in
-            print("Completion handler called \(actin.actionSubTitle) For \(actin.actionPrice)")
+            print("Completion handler called \(actin.actionSubTitle!) For \(actin.actionPrice!)")
         }))
         
         appBanner.addAction(GLInAppAction(title: "5", subTitle: "Boosts", price: "₹184.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle!) For \(action.actionPrice!)")
         }))
         
         appBanner.addAction(GLInAppAction(title: "1", subTitle: "Boosts", price: "₹250.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle!) For \(action.actionPrice!)")
         }))
         appBanner.addAction(GLInAppAction(title: "6", subTitle: "Boosts", price: "₹184.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle!) For \(action.actionPrice!)")
         }))
         appBanner.addAction(GLInAppAction(title: "7", subTitle: "Boosts", price: "₹250.00/ea", handler: { (action) in
-            print("Completion handler called \(action.actionSubTitle) For \(action.actionPrice)")
+            print("Completion handler called \(action.actionSubTitle!) For \(action.actionPrice!)")
         }))
         
         

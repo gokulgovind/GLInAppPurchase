@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		055CC8F4B3342F5927780939 /* Pods-GLInAppPurchase_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLInAppPurchase_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLInAppPurchase_Tests/Pods-GLInAppPurchase_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		40500BFC2E8ACC1AB4AF01B5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		40500BFC2E8ACC1AB4AF01B5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		43FBB8CF0A649137E0D2684A /* Pods_GLInAppPurchase_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLInAppPurchase_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* GLInAppPurchase_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GLInAppPurchase_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,11 +42,11 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		657671C84CB38B2771509340 /* Pods-GLInAppPurchase_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLInAppPurchase_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GLInAppPurchase_Example/Pods-GLInAppPurchase_Example.release.xcconfig"; sourceTree = "<group>"; };
-		B2C35AB4B3A852E70F042E22 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		B2C35AB4B3A852E70F042E22 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		C97A2FB4C980D9DABC097C6B /* Pods-GLInAppPurchase_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLInAppPurchase_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLInAppPurchase_Tests/Pods-GLInAppPurchase_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CCF38DC8088D0265886C0A76 /* Pods-GLInAppPurchase_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GLInAppPurchase_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GLInAppPurchase_Example/Pods-GLInAppPurchase_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DFB3CC61ADDB28C485343CB0 /* Pods_GLInAppPurchase_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GLInAppPurchase_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EEA136D64972C3348983E8DB /* GLInAppPurchase.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GLInAppPurchase.podspec; path = ../GLInAppPurchase.podspec; sourceTree = "<group>"; };
+		EEA136D64972C3348983E8DB /* GLInAppPurchase.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GLInAppPurchase.podspec; path = ../GLInAppPurchase.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,11 +215,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0830;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0830;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};

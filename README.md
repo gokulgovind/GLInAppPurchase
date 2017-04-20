@@ -9,9 +9,11 @@
 ![overView](ScreenShots/Demo1.png) ![overView](ScreenShots/Demo2.png)
 ![overView](ScreenShots/Demo3.png) ![overView](ScreenShots/Demo4.png)
 
+**FYI:** Use tag0.1.2 for swift 2.2 
+
 ## Example
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+To run the example project, clone the repo, and run `pod install` from the Example directory first.Compatiable with ObjC,Swift 2 & Swift 3.0
 
 ## Requirements
 
