@@ -1,5 +1,5 @@
 PODS:
-  - GLInAppPurchase (0.1.0)
+  - GLInAppPurchase (1.1.2)
 
 DEPENDENCIES:
   - GLInAppPurchase (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  GLInAppPurchase: 78c3701e86a484bd2dee27adfb0ad8ada3575d6f
+  GLInAppPurchase: 9f1bd25e466303eb05e60c9ffe38923ac0d55eee
 
 PODFILE CHECKSUM: f3f41a0cb7d475687a0ed1be251038745fba0d45
 
